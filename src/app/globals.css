@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+.vt-container {
+  view-transition-name: container-move;
+}
+
+.vt-about-header {
+  view-transition-name: about-header;
+  width: fit-content;
+}
+
+.vt-bulk-header {
+  view-transition-name: bulk-header;
+  width: fit-content;
+}
+
+.vt-bulk-detail-header {
+  view-transition-name: bulk-detail-header;
+  width: fit-content;
+}
+
+.support .no {
+  color: rgba(200, 0, 0, 1);
+  background-color: rgba(200, 0, 0, 0.1);
+}
+
+.support .yes {
+  display: none;
+  color: rgb(0, 120, 0);
+  background-color: rgba(0, 120, 0, 0.1);
+}
+
+@supports (view-transition-name: figure-caption) {
+  .support .yes {
+    display: inline;
+  }
+  .support .no {
+    display: none;
+  }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.5s;
+}
+
+::view-transition-old(main-title),
+::view-transition-new(main-title),
+::view-transition-old(intro-section),
+::view-transition-new(intro-section),
+::view-transition-old(features-section),
+::view-transition-new(features-section) {
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
