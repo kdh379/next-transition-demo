@@ -10,7 +10,7 @@
  *  해당 페이지의 RSC 내에서 동작하는 비동기 요청이 완료되지 않았지만 isPending 상태가 false로 바껴버린다.
  */
 
-export default function BulkLoading() {
+export default function Loading() {
   return (
     <div>
       <div className="animate-pulse mt-4">

@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 
 import "./globals.css";
 
+
 const pretendard = localFont({
   src: "./fonts/PretendardVariable.woff2",
   display: "swap",
