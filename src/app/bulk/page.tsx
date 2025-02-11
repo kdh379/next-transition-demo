@@ -18,9 +18,14 @@ async function BulkPage() {
           Go to /bulk/streaming (Suspense 사용)
         </Link>
 
+        <Link href="/bulk/hybrid" className="text-blue-500">
+          Go to /bulk/hybrid (loading.tsx + Suspense)
+        </Link>
+
         <Link href="/bulk/no-loading" className="text-blue-500">
           Go to /bulk/no-loading (로딩 처리 없음)
         </Link>
+
       </div>
     </div>
   );

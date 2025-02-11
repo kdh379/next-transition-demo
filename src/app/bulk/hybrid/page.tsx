@@ -17,13 +17,14 @@ function LoadingComponent() {
   return <div className="h-20 bg-gray-200 rounded w-full animate-pulse"></div>;
 }
 
-export default function StreamingPage() {
+export default function HybridPage() {
   return (
     <div className="space-y-4">
-      <h2 className="text-2xl font-bold">Streaming Page</h2>
-      <p>Suspense를 사용한 스트리밍 테스트 페이지입니다.</p>
-      <p>RSC Payload 요청 이후 페이지가 전환됩니다.</p>
+      <h2 className="text-2xl font-bold">loading.js + Suspense</h2>
+      <p>loading.js + Suspense를 이용한 테스트 페이지입니다.</p>
+      <p>RSC Payload 요청 이전 페이지가 전환됩니다.</p>
       <p>빠른 데이터는 먼저 표시되고, 느린 데이터는 개별적으로 로딩됩니다.</p>
+
 
       <div className="space-y-4">
         <Suspense fallback={<LoadingComponent />}>
